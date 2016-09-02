@@ -7,6 +7,12 @@ package org.usfirst.frc.team5482.robot;
  */
 
 public class Constants {
+	
+	// JOYSTICKS
+	public static int kThrottleAxis = 2;
+	public static int kSteeringAxis = 3;
+	
+	// MOTORS
 	public static int kLeftDriveMotorPWM = 4;
     public static int kLeftDriveMotor1PDP = 14;
     public static int kLeftDriveMotor2PDP = 15;
