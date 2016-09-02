@@ -9609,3 +9609,73 @@ org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpil
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 10:57:08.401
 !MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:38:40.616
+!MESSAGE [org.usfirst.frc.team5482.robot.subsystems [in src [in T-Shirt-Cannon]]
+  [Working copy] ExampleSubsystem.java
+    package org.usfirst.frc.team5482.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class ExampleSubsystem
+      void initDefaultCommand()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:38:40.617
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:38:40.642
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:38:40.643
+!MESSAGE Project: P/T-Shirt-Cannon
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:38:46.043
+!MESSAGE Class: Drive Package: org.usfirst.frc.team5482.robot.subsystems
+!SESSION 2016-09-02 11:46:57.537 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-09-02 11:46:59.047
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [486]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 11:47:12.881
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 11:47:12.888
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 11:47:12.947
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 11:47:12.947
+!MESSAGE Installedjava
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:17.499
+!MESSAGE [org.usfirst.frc.team5482.robot.subsystems [in src [in T-Shirt-Cannon]]
+  ExampleSubsystem.java (not open)]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:17.500
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:17.562
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:17.564
+!MESSAGE Project: P/T-Shirt-Cannon
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:21.777
+!MESSAGE Class: Camera Package: org.usfirst.frc.team5482.robot.subsystems
