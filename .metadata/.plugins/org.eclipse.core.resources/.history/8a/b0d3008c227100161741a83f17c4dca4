@@ -18,11 +18,7 @@ public class Cannon {
 		HardwareAdapter.kAltitudeMotor.set(altitudePWM);
 	}
 
-	public void update() {
-		checkTriggers(joystick.getRawButton(Constants.kTrigger), joystick.getRawButton(Constants.kSafety));
-	}
-	
-	void checkTriggers(boolean trigger, boolean safety){
+	public void update(boolean trigger, boolean safety) {
 		if (safety) {
 			SmartDashboard.putString("Cannon Status: ", "Armed!");
 			if (trigger) {

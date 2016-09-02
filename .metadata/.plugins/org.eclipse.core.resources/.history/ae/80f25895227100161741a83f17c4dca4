@@ -70,7 +70,7 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         RoboDrive.tankTreads(joystick.getRawAxis(Constants.kThrottleAxis), joystick.getRawAxis(Constants.kSteeringAxis));
-        Cannon.update();
+        Cannon.update(joystick.getRawButton(Constants.kTrigger), joystick.getRawButton(Constants.kSafety));
         Cannon.altitudeControl(joystick.getPOV());
     }
     

@@ -9603,3 +9603,9 @@ org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpil
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 09:24:26.713
 !MESSAGE Class: Boost Package: org.usfirst.frc.team5482.robot.commands
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 10:57:08.392
+!MESSAGE Running ant file: /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon/T-Shirt-Cannon/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 10:57:08.401
+!MESSAGE Targets: deploy, Mode: run
