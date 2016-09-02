@@ -28,7 +28,6 @@ public class Robot extends IterativeRobot {
     
     Joystick joystick = HardwareAdapter.kMainStick;
     RoboDrive RoboDrive = new RoboDrive();
-    Cannon Cannon = new Cannon();
 
     /**
      * This function is run when the robot is first started up and should be
@@ -70,8 +69,6 @@ public class Robot extends IterativeRobot {
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
         RoboDrive.tankTreads(joystick.getRawAxis(Constants.kThrottleAxis), joystick.getRawAxis(Constants.kSteeringAxis));
-        Cannon.update(joystick.getRawButton(Constants.kTrigger), joystick.getRawButton(Constants.kSafety));
-        Cannon.altitudeControl(joystick.getPOV());
     }
     
     /**

@@ -9,8 +9,7 @@ public class Cannon {
 
 	public void altitudeControl(int pov) {
 
-		double altitudePWM = 0.5;
-
+		double altitudePWM;
 		if (pov != -1) {
 			altitudePWM = ((((pov / -180) + 1) - 0.5) / 2) + 0.5;
 		}

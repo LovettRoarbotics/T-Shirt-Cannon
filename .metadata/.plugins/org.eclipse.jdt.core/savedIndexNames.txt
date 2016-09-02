@@ -6,7 +6,6 @@ INDEX VERSION 1.127+C:\Users\byron\Documents\GitHub\T-Shirt-Cannon\.metadata\.pl
 314730747.index
 1918167158.index
 1597346485.index
-4264470128.index
 3442744962.index
 3304681068.index
 1155594363.index
