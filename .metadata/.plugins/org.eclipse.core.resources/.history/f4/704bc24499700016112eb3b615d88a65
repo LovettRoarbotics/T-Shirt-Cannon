@@ -1,0 +1,13 @@
+package org.usfirst.frc.team5482.lib.util;
+
+public abstract class ConstantsBase {
+	public String name;
+    public Class type;
+    public Object value;
+
+    public Constant(String name, Class type, Object value) {
+        this.name = name;
+        this.type = type;
+        this.value = value;
+    }
+}
