@@ -9679,3 +9679,190 @@ org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpil
 
 !ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 11:50:21.777
 !MESSAGE Class: Camera Package: org.usfirst.frc.team5482.robot.subsystems
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:17:28.264
+!MESSAGE Running ant file: /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon/T-Shirt-Cannon/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:17:28.273
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:20:43.879
+!MESSAGE Running ant file: /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon/T-Shirt-Cannon/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:20:43.879
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:23:45.646
+!MESSAGE Running ant file: /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon/T-Shirt-Cannon/build.xml
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 13:23:45.647
+!MESSAGE Targets: deploy, Mode: run
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:05:08.140
+!MESSAGE [org.usfirst.frc.team5482.robot.subsystems [in src [in T-Shirt-Cannon]]
+  ExampleSubsystem.java
+    package org.usfirst.frc.team5482.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class ExampleSubsystem
+      void initDefaultCommand()
+  [Working copy] Camera.java
+    package org.usfirst.frc.team5482.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class Camera
+      void reset()
+      void initDefaultCommand()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:05:08.141
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:05:08.179
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:05:08.181
+!MESSAGE Project: P/T-Shirt-Cannon
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:05:21.686
+!MESSAGE Class: I2C Package: org.usfirst.frc.team5482.robot.subsystems
+!SESSION 2016-09-02 16:14:02.728 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-09-02 16:14:04.328
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [486]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:14:17.377
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:14:17.390
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:14:17.390
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:14:17.393
+!MESSAGE Installedjava
+!SESSION 2016-09-02 16:16:07.130 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-09-02 16:16:08.580
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [486]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:16:24.896
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:16:24.903
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:16:24.904
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:16:24.904
+!MESSAGE Installedjava
+!SESSION 2016-09-02 16:24:22.266 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.7.0_79
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/byron.lathi/Desktop/robotics/T-Shirt-Cannon -product org.eclipse.epp.package.java.product -keyring /Users/byron.lathi/.eclipse_keyring -showlocation
+
+!ENTRY edu.wpi.first.wpilib.plugins.riolog 4 0 2016-09-02 16:24:23.982
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.wpi.first.wpilib.plugins.riolog [486]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:24:37.690
+!MESSAGE Installing tools if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:24:37.696
+!MESSAGE Installedtools
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:24:37.697
+!MESSAGE Installing java if necessary
+
+!ENTRY edu.wpi.first.wpilib.plugins.core 1 0 2016-09-02 16:24:37.697
+!MESSAGE Installedjava
+
+!ENTRY org.eclipse.recommenders.rcp 4 5 2016-09-02 16:33:10.359
+!MESSAGE Failed to resolve selection in ‘=T-Shirt-Cannon/src<org.usfirst.frc.team5482.robot.subsystems{I2C.java’ at offset 991
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromTypeRootInEditor(JavaElementSelections.java:164)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:119)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelections.resolveJavaElementFromEditor(JavaElementSelections.java:102)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.handleSelectionInEditor(JavaElementSelectionService.java:108)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService.access$1(JavaElementSelectionService.java:105)
+	at org.eclipse.recommenders.internal.rcp.JavaElementSelectionService$1.run(JavaElementSelectionService.java:82)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:292)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:35:49.728
+!MESSAGE [org.usfirst.frc.team5482.robot.subsystems [in src [in T-Shirt-Cannon]]
+  Camera.java (not open)
+  ExampleSubsystem.java
+    package org.usfirst.frc.team5482.robot.subsystems
+    import edu.wpi.first.wpilibj.command.Subsystem
+    class ExampleSubsystem
+      void initDefaultCommand()]
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:35:49.730
+!MESSAGE class org.eclipse.jdt.internal.core.PackageFragment
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:35:49.762
+!MESSAGE initialize
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:35:49.764
+!MESSAGE Project: P/T-Shirt-Cannon
+
+!ENTRY WPILib_Java_Robot_Development 1 0 2016-09-02 16:35:57.085
+!MESSAGE Class: Led Package: org.usfirst.frc.team5482.robot.subsystems

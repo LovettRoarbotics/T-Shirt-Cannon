@@ -1,0 +1,24 @@
+package org.usfirst.frc.team5482.robot.subsystems;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.I2C;
+
+/**
+ *
+ */
+public class I2C extends Subsystem {
+
+	I2C I2CBus;
+    
+    public void led(double r, double g, double b){
+    	I2CBus = new I2C(I2C.Port.kOnboard, 0x1E);
+    	
+    }
+
+    public void initDefaultCommand() {
+    	
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+}
+

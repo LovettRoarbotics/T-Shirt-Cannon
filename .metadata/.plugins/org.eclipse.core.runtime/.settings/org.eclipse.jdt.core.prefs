@@ -13,3 +13,4 @@ org.eclipse.jdt.core.compiler.compliance=1.8
 org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
 org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
 org.eclipse.jdt.core.compiler.source=1.8
+org.eclipse.jdt.core.userLibrary.WPILib=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/Users/byron.lathi/wpilib/java/current/lib/WPILib-sources.jar" sourceattachment\="/Users/byron.lathi/wpilib/java/current/lib/WPILib-sources.jar"/>\n</userlibrary>\n
