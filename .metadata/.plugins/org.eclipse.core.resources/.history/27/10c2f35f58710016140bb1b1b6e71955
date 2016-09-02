@@ -35,10 +35,6 @@ public class Led extends Subsystem {
 		rgb = color;
 		HardwareAdapter.kI2C.transaction(color, 3, null, 0);
 	}
-	
-	public byte[] getColor(){
-		return rgb;
-	}
 
 	public void initDefaultCommand() {
 		// Set the default command for a subsystem here.

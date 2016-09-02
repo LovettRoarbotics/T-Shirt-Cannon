@@ -8,8 +8,6 @@ import org.usfirst.frc.team5482.robot.HardwareAdapter;
  *
  */
 public class Led extends Subsystem {
-	
-	public byte rgb[] = new byte[3];
 
 	public void rainBow() {
 
@@ -22,22 +20,13 @@ public class Led extends Subsystem {
 
 	public void color(byte a, byte b, byte c) {
 		byte colorA[] = { a, b, c };
+		byte rgb[] = new byte[3];
 
 		for (int i = 0; i < 3; i++) {
 			rgb[i] = colorA[i];
 		}
 
 		HardwareAdapter.kI2C.transaction(rgb, 3, null, 0);
-	}
-	
-	public void setColor(byte a, byte b, byte c){
-		byte color[] = {a, b, c};
-		rgb = color;
-		HardwareAdapter.kI2C.transaction(color, 3, null, 0);
-	}
-	
-	public byte[] getColor(){
-		return rgb;
 	}
 
 	public void initDefaultCommand() {
