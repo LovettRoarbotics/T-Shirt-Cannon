@@ -3,6 +3,13 @@ package org.usfirst.frc.team5482.robot;
 import org.usfirst.frc.team5482.robot.HardwareAdapter;
 
 public class RoboDrive {
+	
+	/**
+	 * Drives the robot with tank-like steering.
+	 * @author Byron Lathi <p>
+	 * @param throttle Double 0 to 1. 0.5 is still
+	 * @param steering Double 0 to 1. 0.5 is straight.
+	 */
 
 	public void tankTreads(double throttle, double steering) {
 

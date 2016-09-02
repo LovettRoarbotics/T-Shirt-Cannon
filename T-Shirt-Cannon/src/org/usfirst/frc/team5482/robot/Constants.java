@@ -14,6 +14,7 @@ public class Constants {
 	
 	public static int kTrigger = 1;
 	public static int kSafety = 2;
+	public static int kBoost = 8;
 	
 	// MOTORS
 	public static int kLeftDriveMotorPWM = 4;
