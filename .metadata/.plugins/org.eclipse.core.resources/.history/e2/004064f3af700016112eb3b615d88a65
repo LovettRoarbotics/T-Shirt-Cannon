@@ -12,15 +12,15 @@ public class HardwareAdapter {
 	public static Joystick kMainStick = new Joystick(0);
 	
 	//Motors
-	public static RoboSpeedController kLeftDriveMotor = new RoboSpeedController(
+	 static RoboSpeedController kLeftDriveMotor = new RoboSpeedController(
 	            new Talon(Constants.kLeftDriveMotorPWM), new int[]{
 	            Constants.kLeftDriveMotor1PDP,
 	            Constants.kLeftDriveMotor2PDP});
-	public static RoboSpeedController kRightDriveMotor = new RoboSpeedController(
+	 static RoboSpeedController kRightDriveMotor = new RoboSpeedController(
 	            new Talon(Constants.kRightDriveMotorPWM), new int[]{
 	            Constants.kRightDriveMotor2PDP,
 	            Constants.kRightDriveMotor2PDP});
-	public static RoboSpeedController kAltitudeMotor = new RoboSpeedController(
+	 static RoboSpeedController kAltitudeMotor = new RoboSpeedController(
 	            new Victor(Constants.kAltitudeMotorPWM), new int[]{
 	            Constants.kRightDriveMotor2PDP,
 	            Constants.kRightDriveMotor2PDP});

@@ -1,0 +1,11 @@
+package org.usfirst.frc.team5482.robot;
+
+import org.usfirst.frc.team5482.robot.HardwareAdapter;
+import edu.wpi.first.wpilibj.SpeedController;
+
+public class RoboDrive {
+	
+	public void tankTreads(double throttle, double steering){
+		kLeftDriveMotor.set(1);
+	}
+}
