@@ -1,0 +1,15 @@
+package org.usfirst.frc.team5482.robot;
+
+import edu.wpi.first.wpilibj.Joystick;
+
+public class Cannon {
+	
+	Joystick joystick = HardwareAdapter.kMainStick;
+	
+	public void altitudeControl(){
+		
+	}
+	public void fireCannon(boolean trigger, boolean safety){
+		if ()
+	}
+}

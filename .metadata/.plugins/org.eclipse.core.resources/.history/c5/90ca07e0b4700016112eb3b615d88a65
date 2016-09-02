@@ -12,9 +12,6 @@ public class Constants {
 	public static int kThrottleAxis = 2;
 	public static int kSteeringAxis = 3;
 	
-	public static int kTrigger = 1;
-	public static int kSafety = 2;
-	
 	// MOTORS
 	public static int kLeftDriveMotorPWM = 4;
     public static int kLeftDriveMotor1PDP = 14;
