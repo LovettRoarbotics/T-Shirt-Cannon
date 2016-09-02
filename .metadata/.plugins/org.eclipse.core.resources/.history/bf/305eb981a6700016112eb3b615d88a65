@@ -3,12 +3,6 @@ package org.usfirst.frc.team5482.lib.util;
 import org.usfirst.frc.team5482.robot.HardwareAdapter;
 import edu.wpi.first.wpilibj.SpeedController;
 
-/**
- * Based on <a href="https://github.com/Team254/FRC-2015/blob/master/src/com/team254/lib/util/CheesySpeedController.java">CheesySpeedController.java</a> by Team 254.
- * @author Byron Lathi based on Team 254
- *
- */
-
 public class RoboSpeedController implements SpeedController {
     protected SpeedController[] m_controllers;
     protected int[] m_pdp_slots;

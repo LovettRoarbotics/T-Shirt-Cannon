@@ -2,8 +2,8 @@ package org.usfirst.frc.team5482.robot;
 
 /**
  * Contains the basic constants that are used by the robot. <p>
- * based on <a href="https://github.com/Team254/FRC-2015/blob/master/src/com/team254/frc2015/Constants.java">Constants.java</a> by Team 254.	 
- * @author Byron Lathi based on Team 254
+ * Based on based on https://github.com/Team254/FRC-2015/blob/master/src/com/team254/frc2015/Constants.java by team 254.	 
+ * @author Byron Lathi based on Team-254
  */
 
 public class Constants {
