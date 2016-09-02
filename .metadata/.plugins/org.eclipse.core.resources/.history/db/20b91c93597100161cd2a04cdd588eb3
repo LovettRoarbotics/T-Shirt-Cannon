@@ -1,0 +1,47 @@
+package org.usfirst.frc.team5482.robot.subsystems;
+
+import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import org.usfirst.frc.team5482.robot.HardwareAdapter;
+
+/**
+ *
+ */
+public class Led extends Subsystem {
+	
+	public byte rgb[] = new byte[3];
+
+	public void rainBow() {
+
+	}
+
+	public void pulse(byte a, byte b, byte c, byte x, byte y, byte z) {
+		double colorA[] = { a, b, c };
+		double colorB[] = { x, y, z };
+	}
+
+	public void color(byte a, byte b, byte c) {
+		byte colorA[] = { a, b, c };
+
+		for (int i = 0; i < 3; i++) {
+			rgb[i] = colorA[i];
+		}
+
+		HardwareAdapter.kI2C.transaction(rgb, 3, null, 0);
+	}
+	
+	public void setColor(byte a, byte b, byte c){
+		byte color[] = {a, b, c};
+		rgb = color;
+		HardwareAdapter.kI2C.transaction(color, 3, null, 0);
+	}
+	
+	public byte[] getColor(){
+		return rgb;
+	}
+
+	public void initDefaultCommand() {
+		// Set the default command for a subsystem here.
+		// setDefaultCommand(new Command());
+	}
+}
