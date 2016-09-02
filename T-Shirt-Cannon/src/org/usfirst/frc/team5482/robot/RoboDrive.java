@@ -6,7 +6,7 @@ public class RoboDrive {
 
 	public void tankTreads(double throttle, double steering) {
 
-		double turnVal = steering + 0.5;
+		double turnVal = steering - 0.5;
 
 		double leftPWM;
 		double rightPWM;
@@ -14,8 +14,8 @@ public class RoboDrive {
 		leftPWM = throttle;
 		rightPWM = throttle;
 
-		leftPWM = leftPWM * turnVal;
-		rightPWM = rightPWM / turnVal;
+		leftPWM = leftPWM + turnVal;
+		rightPWM = rightPWM - turnVal;
 
 		if (throttle == 0) {
 			leftPWM = steering;
