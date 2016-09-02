@@ -15,17 +15,6 @@ public class Led extends Subsystem {
 	
 	void sendData(int[] color){
 		
-		for (int i = 0; i < color.length; i++){
-			
-		}
-		
-		byte rBits[] = {};
-		byte gBits[] = {};
-		byte bBits[] = {};
-		HardwareAdapter.kLedI2C.transaction(rBits, 4, null, 0);
-		HardwareAdapter.kLedI2C.transaction(gBits, 4, null, 0);
-		HardwareAdapter.kLedI2C.transaction(bBits, 4, null, 0);
-		
 	}
 
 	public void setColor(int a, int b, int c) {
