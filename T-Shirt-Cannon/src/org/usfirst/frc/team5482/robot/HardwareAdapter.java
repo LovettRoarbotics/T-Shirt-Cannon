@@ -1,8 +1,9 @@
 package org.usfirst.frc.team5482.robot;
 
-import edu.wpi.first.wpilibj.I2C;
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.Victor;
 
@@ -19,7 +20,11 @@ public class HardwareAdapter {
 
 	// Electrical Systems
 	public static PowerDistributionPanel kPDP = new PowerDistributionPanel();
+	// Pneumatics
+	public static Solenoid kRegulatorValve = new Solenoid(Constants.kRegulatorValvePort);
+	public static Victor kFiringValve = new Victor(Constants.kFiringValvePort);
 
-	// Communication Systems
-	public static I2C kLedI2C = new I2C(I2C.Port.kOnboard, 38);
+	public static AnalogInput kFireTankPressure = new AnalogInput(Constants.kPressureSensor);
+	
+	public static double kFiringPressure;
 }

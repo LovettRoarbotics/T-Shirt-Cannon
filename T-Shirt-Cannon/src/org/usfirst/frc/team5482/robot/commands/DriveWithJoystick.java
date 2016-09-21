@@ -15,17 +15,13 @@ public class DriveWithJoystick extends Command {
 	DriveTrain drivetrain = new DriveTrain();
 
     public DriveWithJoystick() {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
     	requires(drivetrain);
     }
 
-    // Called just before this Command runs the first time
     protected void initialize() {
     	log("Initializing Joystick Drive");
     }
 
-    // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	log("Driving with Arcade Drive");
     	DriveTrain.arcadeDrive(OI.mainStick.getRawAxis(Constants.kThrottleAxis), OI.mainStick.getRawAxis(Constants.kSteeringAxis));
