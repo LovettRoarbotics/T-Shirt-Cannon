@@ -24,7 +24,7 @@ public class FiringSystem extends Subsystem {
     }
     
     public void fire(){
-    	if (OI.fireSafety.get()){
+    	if (OI.mainStick.getRawButton(Constants.kSafety)){
     		// If we get the relays then we will have to figure something else out, rn we are just going to use a victor 888
     		HardwareAdapter.kFiringValve.set(1);
     		Timer.delay(Constants.fireDelay);

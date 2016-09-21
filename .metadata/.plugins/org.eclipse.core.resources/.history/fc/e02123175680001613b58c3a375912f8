@@ -16,15 +16,13 @@ public class FiringSystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
-	
-	public boolean fired;
 
     public void initDefaultCommand() {
     	setDefaultCommand(new PollFiringSystem());
     }
     
     public void fire(){
-    	if (OI.fireSafety.get()){
+    	if (OI.mainStick.getRawButton(Constants.kSafety)){
     		// If we get the relays then we will have to figure something else out, rn we are just going to use a victor 888
     		HardwareAdapter.kFiringValve.set(1);
     		Timer.delay(Constants.fireDelay);
@@ -39,11 +37,8 @@ public class FiringSystem extends Subsystem {
     }
     
     private void resetPressure(){
-    	fired = true;
     	log("Resetting Pressure...");
     	setPressure();
-    	Timer.delay(0.01);
-    	fired = false;
     }
     
     public void setPressure(){

@@ -1,7 +1,5 @@
 package org.usfirst.frc.team5482.robot;
 
-import org.usfirst.frc.team5482.robot.commands.FireCannon;
-
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -17,7 +15,6 @@ public class OI {
     // number it is.
     public static Joystick mainStick = HardwareAdapter.kMainStick;
     Button fireTrigger = new JoystickButton(mainStick, Constants.kTrigger);
-    public static Button fireSafety = new JoystickButton(mainStick, Constants.kSafety);
     
     // There are a few additional built in buttons you can use. Additionally,
     // by subclassing Button you can create custom triggers and bind those to
@@ -30,9 +27,7 @@ public class OI {
     // Start the command when the button is pressed and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenPressed(new ExampleCommand());
-    public OI(){
-    	fireTrigger.whenPressed(new FireCannon());
-    }
+    fireTrigger.whenPressed(new FireCannon());
     
     // Run the command while the button is being held down and interrupt it once
     // the button is released.

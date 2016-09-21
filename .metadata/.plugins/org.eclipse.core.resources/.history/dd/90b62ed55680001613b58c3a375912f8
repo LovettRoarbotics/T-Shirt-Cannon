@@ -17,7 +17,6 @@ public class OI {
     // number it is.
     public static Joystick mainStick = HardwareAdapter.kMainStick;
     Button fireTrigger = new JoystickButton(mainStick, Constants.kTrigger);
-    public static Button fireSafety = new JoystickButton(mainStick, Constants.kSafety);
     
     // There are a few additional built in buttons you can use. Additionally,
     // by subclassing Button you can create custom triggers and bind those to
