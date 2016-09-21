@@ -1,17 +1,9 @@
 
 package org.usfirst.frc.team5482.robot;
 
-import org.usfirst.frc.team5482.robot.commands.ExampleCommand;
-import org.usfirst.frc.team5482.robot.subsystems.ExampleSubsystem;
-
-import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.IterativeRobot;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -22,30 +14,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static OI oi;
-
-    Command autonomousCommand;
-    SendableChooser chooser;
-    
-    Joystick joystick = HardwareAdapter.kMainStick;
-    RoboDrive RoboDrive = new RoboDrive();
-    Cannon Cannon = new Cannon();
-    
-    I2C i2c;
-
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
     public void robotInit() {
-    	i2c = new I2C(I2C.Port.kOnboard, 168);
 		oi = new OI();
-        chooser = new SendableChooser();
-        chooser.addDefault("Default Auto", new ExampleCommand());
-//        chooser.addObject("My Auto", new MyAutoCommand());
-        SmartDashboard.putData("Auto mode", chooser);
-        SmartDashboard.putNumber("test", 1);
     }
 	
 	/**
@@ -74,9 +49,6 @@ public class Robot extends IterativeRobot {
      */
     public void teleopPeriodic() {
         Scheduler.getInstance().run();
-        RoboDrive.tankTreads(joystick.getRawAxis(Constants.kThrottleAxis), joystick.getRawAxis(Constants.kSteeringAxis));
-        Cannon.update();
-        Cannon.altitudeControl(joystick.getPOV());
     }
     
     /**

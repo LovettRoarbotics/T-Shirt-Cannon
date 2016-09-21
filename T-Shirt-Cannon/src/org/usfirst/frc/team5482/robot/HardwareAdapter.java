@@ -1,7 +1,5 @@
 package org.usfirst.frc.team5482.robot;
 
-import org.usfirst.frc.team5482.lib.util.RoboSpeedController;
-
 import edu.wpi.first.wpilibj.I2C;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
@@ -12,25 +10,16 @@ public class HardwareAdapter {
 
 	// Joysticks
 	public static Joystick kMainStick = new Joystick(0);
-	
-	
+
 	// Motors
-	public static RoboSpeedController kLeftDriveMotor = new RoboSpeedController(
-	            new Talon(Constants.kLeftDriveMotorPWM), new int[]{
-	            Constants.kLeftDriveMotor1PDP,
-	            Constants.kLeftDriveMotor2PDP});
-	public static RoboSpeedController kRightDriveMotor = new RoboSpeedController(
-	            new Talon(Constants.kRightDriveMotorPWM), new int[]{
-	            Constants.kRightDriveMotor2PDP,
-	            Constants.kRightDriveMotor2PDP});
-	public static RoboSpeedController kAltitudeMotor = new RoboSpeedController(
-	            new Victor(Constants.kAltitudeMotorPWM), new int[]{
-	            Constants.kRightDriveMotor2PDP,
-	            Constants.kRightDriveMotor2PDP});
-	 
-	 // Electrical Systems
-	 public static PowerDistributionPanel kPDP = new PowerDistributionPanel();
-	 
-	 // Communication Systems
-	 public static I2C kLedI2C = new I2C(I2C.Port.kOnboard, 38);
+	public static Talon kLeftDriveMotor = new Talon(Constants.kLeftDriveMotorPWM);
+	public static Talon kRightDriveMotor = new Talon(Constants.kRightDriveMotorPWM);
+	
+	public static Victor kAltitudeMotor = new Victor(Constants.kAltitudeMotorPWM);
+
+	// Electrical Systems
+	public static PowerDistributionPanel kPDP = new PowerDistributionPanel();
+
+	// Communication Systems
+	public static I2C kLedI2C = new I2C(I2C.Port.kOnboard, 38);
 }

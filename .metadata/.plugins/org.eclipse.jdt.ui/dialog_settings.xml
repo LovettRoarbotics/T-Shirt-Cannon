@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="/Users/byron.lathi/wpilib/java/current/lib" key="org.eclipse.jdt.ui.lastextjar"/>
 	<section name="completion_proposal_size">
 	</section>
 	<section name="JavaElementSearchActions">
@@ -9,8 +8,5 @@
 		<item value="2" key="pageIndex"/>
 	</section>
 	<section name="quick_assist_proposal_size">
-	</section>
-	<section name="ClasspathContainerSelectionPage">
-		<item value="3" key="index"/>
 	</section>
 </section>
