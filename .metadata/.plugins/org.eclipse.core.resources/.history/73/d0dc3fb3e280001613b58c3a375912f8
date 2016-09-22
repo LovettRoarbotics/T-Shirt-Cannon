@@ -19,10 +19,6 @@ public class Constants {
 	
 	public static int kTrigger = 1;
 	public static int kSafety = 2;
-	public static int kPressureUp = 3;
-	public static int kPressureDown = 4;
-	public static int kAltitudeUp = 5;
-	public static int kAltitudeDown = 6;
 	
 	// MOTORS
 	public static int kLeftDriveMotorPWM = 0;

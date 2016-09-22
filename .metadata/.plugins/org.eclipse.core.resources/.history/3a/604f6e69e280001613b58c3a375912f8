@@ -19,14 +19,13 @@ public class HardwareAdapter {
 
 	// Electrical Systems
 	public static PowerDistributionPanel kPDP = new PowerDistributionPanel();
-
+	
 	// Pneumatics
 	public static Solenoid kRegulatorValve = new Solenoid(Constants.kRegulatorValvePort);
 	public static Victor kFiringValve = new Victor(Constants.kFiringValvePort);
 	public static AnalogInput kFireTankPressure = new AnalogInput(Constants.kPressureSensor);
-
-	// Variables? I guess? I did not no where else to put this so it will stay
-	// here. Eh, I could probably put it in
+	
+	// Variables? I guess? I did not no where else to put this so it will stay here. Eh, I could probably put it in
 	// Firing system, but im to lazy and its not worth an entire commit.
 	public static double kFiringPressure;
 }

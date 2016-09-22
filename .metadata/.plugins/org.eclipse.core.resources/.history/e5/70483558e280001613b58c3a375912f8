@@ -15,18 +15,16 @@ public class HardwareAdapter {
 	// Motors
 	public static Talon kLeftDriveMotor = new Talon(Constants.kLeftDriveMotorPWM);
 	public static Talon kRightDriveMotor = new Talon(Constants.kRightDriveMotorPWM);
+	
 	public static Victor kAltitudeMotor = new Victor(Constants.kAltitudeMotorPWM);
 
 	// Electrical Systems
 	public static PowerDistributionPanel kPDP = new PowerDistributionPanel();
-
 	// Pneumatics
 	public static Solenoid kRegulatorValve = new Solenoid(Constants.kRegulatorValvePort);
 	public static Victor kFiringValve = new Victor(Constants.kFiringValvePort);
-	public static AnalogInput kFireTankPressure = new AnalogInput(Constants.kPressureSensor);
 
-	// Variables? I guess? I did not no where else to put this so it will stay
-	// here. Eh, I could probably put it in
-	// Firing system, but im to lazy and its not worth an entire commit.
+	public static AnalogInput kFireTankPressure = new AnalogInput(Constants.kPressureSensor);
+	
 	public static double kFiringPressure;
 }
