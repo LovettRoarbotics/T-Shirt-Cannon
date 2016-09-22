@@ -60,9 +60,6 @@ public class FiringSystem extends Subsystem {
     			HardwareAdapter.kRegulatorValve.set(false);
     		}
     		break;
-    	default:
-    		SmartDashboard.putString("Firing System Error", "error: does not compute!");
-    		break;
     	}
     }
 

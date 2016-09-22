@@ -44,7 +44,7 @@ public class FiringSystem extends Subsystem {
 	private void resetPressure() {
 		fired = true;
 		log("Resetting Pressure...");
-		setPressure(CannonType.oneTank);
+		setPressure();
 		Timer.delay(0.01);
 		fired = false;
 	}
@@ -59,9 +59,6 @@ public class FiringSystem extends Subsystem {
     		} else {
     			HardwareAdapter.kRegulatorValve.set(false);
     		}
-    		break;
-    	default:
-    		SmartDashboard.putString("Firing System Error", "error: does not compute!");
     		break;
     	}
     }
