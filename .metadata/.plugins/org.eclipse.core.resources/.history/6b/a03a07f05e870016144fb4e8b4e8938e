@@ -1,0 +1,39 @@
+package org.usfirst.frc.team5482.robot.utilities;
+
+public class SystemManager {
+	public enum RobotStatus {
+		OK, WARNING, ERROR, FATAL
+	}
+
+	private RobotStatus status;
+	
+
+	String systemName;
+
+	public SystemManager(String systemName) {
+		this.systemName = systemName;
+	}
+
+	public RobotStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(RobotStatus status) {
+		this.status = status;
+	}
+	
+	public String toString(){
+		switch (status){
+		case OK:
+			return "OK";
+		case WARNING:
+			return "WARNING";
+		case ERROR:
+			return "ERROR";
+		case FATAL:
+			return "FATAL";
+		}
+		return "Operation Failed! Check your inputs.";
+	}
+	
+}

@@ -1,0 +1,42 @@
+
+package org.usfirst.frc.team5482.robot;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.RobotDrive;
+
+public class Robot extends IterativeRobot {
+	
+	RobotDrive roboDrive = new RobotDrive(0, 1);
+	
+	Joystick mainStick = new Joystick(0);
+	
+
+	public void robotInit() {
+
+	}
+
+	public void autonomousInit() {
+	}
+
+	public void autonomousPeriodic() {
+	}
+
+	public void teleopPeriodic() {
+		drive();
+		shoot();
+
+	}
+
+	public void testPeriodic() {
+
+	}
+	
+	private void drive(){
+		roboDrive.arcadeDrive(stick);
+	}
+	
+	private void shoot(){
+		
+	}
+
+}

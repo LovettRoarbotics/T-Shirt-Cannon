@@ -1,0 +1,52 @@
+
+package org.usfirst.frc.team5482.robot;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+
+public class Robot extends IterativeRobot {
+	
+	RobotDrive roboDrive = new RobotDrive(0, 1);
+	
+	Joystick mainStick = new Joystick(0);
+	
+	Button fire = new JoystickButton(mainStick, 0);
+	Button safety = new JoystickButton(mainStick, 1);
+	
+	Spark canonRelay = new Spark(2);
+	
+
+	public void robotInit() {
+
+	}
+
+	public void autonomousInit() {
+	}
+
+	public void autonomousPeriodic() {
+	}
+
+	public void teleopPeriodic() {
+		drive();
+		shoot();
+
+	}
+
+	public void testPeriodic() {
+
+	}
+	
+	private void drive(){
+		roboDrive.arcadeDrive(mainStick);
+	}
+	
+	private void shoot(){
+		if (fire.get() && safety.get()){
+			
+		}
+	}
+
+}

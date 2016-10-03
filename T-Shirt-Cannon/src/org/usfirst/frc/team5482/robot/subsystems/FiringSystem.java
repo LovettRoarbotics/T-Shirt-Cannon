@@ -3,6 +3,8 @@ package org.usfirst.frc.team5482.robot.subsystems;
 import org.usfirst.frc.team5482.robot.Constants;
 import org.usfirst.frc.team5482.robot.HardwareAdapter;
 import org.usfirst.frc.team5482.robot.OI;
+import org.usfirst.frc.team5482.robot.utilities.SystemManager;
+import org.usfirst.frc.team5482.robot.utilities.SystemManager.RobotStatus;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -16,8 +18,10 @@ public class FiringSystem extends Subsystem {
 	// Put methods for controlling this subsystem
 	// here. Call these from Commands.
 
+	SystemManager statusManager = new SystemManager("Cannon");
+
 	public boolean fired;
-	
+
 	public enum CannonType {
 		oneTank, twoTank
 	}
@@ -26,14 +30,15 @@ public class FiringSystem extends Subsystem {
 	}
 
 	public void fire() {
-		if (OI.fireSafety.get()) {
-			// If we get the relays then we will have to figure something else
-			// out, rn we are just going to use a victor 888
+		if (OI.fireSafety.get() && statusManager.getStatus() == RobotStatus.OK) {
 			HardwareAdapter.kFiringValve.set(1);
 			Timer.delay(Constants.fireDelay);
 			HardwareAdapter.kFiringValve.set(0);
 			resetPressure();
-
+		} else if (OI.fireSafety.get() && statusManager.getStatus() != RobotStatus.OK) {
+			log("Not enough pressure! Wait for pressure to increase or lower the setting!");
+			statusManager.setStatus(RobotStatus.ERROR);
+			Timer.delay(0.5);
 		}
 	}
 
@@ -49,25 +54,42 @@ public class FiringSystem extends Subsystem {
 		fired = false;
 	}
 
-	public void setPressure(CannonType cannonType){
-    	switch (cannonType){
-    	case oneTank:
-    		break;
-    	case twoTank:
-    		if (fireTankPressure(HardwareAdapter.kFireTankPressure.getVoltage()) <= HardwareAdapter.kFiringPressure){
-    			HardwareAdapter.kRegulatorValve.set(true);
-    		} else {
-    			HardwareAdapter.kRegulatorValve.set(false);
-    		}
-    		break;
-    	default:
-    		SmartDashboard.putString("Firing System Error", "error: does not compute!");
-    		break;
-    	}
-    }
+	public void setPressure(CannonType cannonType) {
+		switch (cannonType) {
+		case oneTank:
+			if (fireTankPressure(HardwareAdapter.kOneTankPressure.getVoltage()) <= HardwareAdapter.kFiringPressure
+					+ Constants.pressureOverage) {
+				log("Tank Status", "Filling up tank...");
+				statusManager.setStatus(RobotStatus.WARNING);
+			} else {
+				log("Tank Status", "Tank Full");
+				statusManager.setStatus(RobotStatus.OK);
+			}
+			break;
+		case twoTank:
+			if (fireTankPressure(HardwareAdapter.kFireTankPressure.getVoltage()) <= HardwareAdapter.kFiringPressure
+					+ Constants.pressureOverage) {
+				HardwareAdapter.kRegulatorValve.set(true);
+				log("Tank Status", "Filling up tank...");
+				statusManager.setStatus(RobotStatus.WARNING);
+			} else {
+				HardwareAdapter.kRegulatorValve.set(false);
+				log("Tank Status", "Tank Full");
+				statusManager.setStatus(RobotStatus.OK);
+			}
+			break;
+		default:
+			SmartDashboard.putString("Firing System Error", "error: does not compute!");
+			break;
+		}
+	}
 
 	private void log(String message) {
-		SmartDashboard.putString("Pneumatic Status", message);
+		log("Pneumatic Status", message);
+	}
+
+	private void log(String system, String message) {
+		SmartDashboard.putString(system, message);
 	}
 
 	private double fireTankPressure(double sensorIn) {

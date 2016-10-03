@@ -1,0 +1,47 @@
+package org.usfirst.frc.team5482.robot;
+
+/**
+ * Contains the basic constants that are used by the robot. <p>
+ * based on <a href="https://github.com/Team254/FRC-2015/blob/master/src/com/team254/frc2015/Constants.java">Constants.java</a> by Team 254.	 
+ * @author Byron Lathi based on Team 254
+ */
+
+// Yes i know all of this stuff should be in robotmap but i'm to lazy to change all of it. If anybody else wants to then feel free.
+
+public class Constants {
+
+	// CONSTANTS
+	public static double fireDelay = 0.1;
+	
+	// JOYSTICKS
+	public static final int kThrottleAxis = 2;
+	public static final int kSteeringAxis = 3;
+	
+	public static final int kTrigger = 1;
+	public static final int kSafety = 2;
+	public static final int kPressureUp = 3;
+	public static final int kPressureDown = 4;
+	public static final int kAltitudeUp = 5;
+	public static final int kAltitudeDown = 6;
+	
+	// MOTORS
+	public static final int kLeftDriveMotorPWM = 0;
+    public static final int kLeftDriveMotor1PDP = 13;
+    public static final int kLeftDriveMotor2PDP = 12;
+
+    public static final int kRightDriveMotorPWM = 1;
+    public static final int kRightDriveMotor1PDP = 2;
+    public static final int kRightDriveMotor2PDP = 3;
+    
+    public static final int kAltitudeMotorPWM = 2;
+    public static final int kAltitudeMotor1PDP = 4;
+    
+    public static final int kRegulatorValvePort = 1;
+    public static final int kFiringValvePort = 3;
+    
+    // SENSORS
+    
+	public static final double kAltitudeEncoderPPR = 7*26.9;
+    
+    public static final int kPressureSensor = 1;
+}

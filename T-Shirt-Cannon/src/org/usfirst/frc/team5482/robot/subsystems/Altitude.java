@@ -5,7 +5,9 @@ import org.usfirst.frc.team5482.robot.HardwareAdapter;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-/** Controls the Altitude of the Cannon. <p> You should probably make the PID and slap on an encoder or a potentiometer.
+/** @deprecated Use {@link AltitudePID} instead. <p>
+ * Controls the Altitude of the Cannon. <p> <strike>You should probably make the PID and slap on an encoder or a potentiometer.</strike><p>
+ * Yeah I did that, so don't use this anymore.
  * 
  * @author Byron Lathi
  *

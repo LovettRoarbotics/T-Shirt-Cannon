@@ -1,0 +1,73 @@
+
+package org.usfirst.frc.team5482.robot;
+
+import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+public class Robot extends IterativeRobot {
+	
+	private RobotDrive roboDrive = new RobotDrive(0, 1);
+	
+	private Victor altitude = new Victor(2);
+	
+	private Joystick mainStick = new Joystick(0);
+	
+	private Button fire = new JoystickButton(mainStick, 0);
+	private Button safety = new JoystickButton(mainStick, 1);
+	
+	private Spark cannonRelay = new Spark(2);
+	private Victor compressors = new Victor(3);
+	
+	public int cannonLoop = 0;
+	
+
+	public void robotInit() {
+
+	}
+
+	public void autonomousInit() {
+	}
+
+	public void autonomousPeriodic() {
+	}
+
+	public void teleopPeriodic() {
+		drive();
+		shoot();
+
+	}
+
+	public void testPeriodic() {
+
+	}
+	
+	private void drive(){
+		roboDrive.arcadeDrive(mainStick);
+		SmartDashboard.putString("Drive Status", "GOOD");
+	}
+	
+	private void shoot(){
+		
+		if (fire.get() && safety.get()){
+			cannonRelay.set(1);
+			Timer.delay(0.5);
+			cannonRelay.set(0);
+			for (int i = 0; i < 500; i++){
+				compressors.set(1);
+			}
+			compressors.set(0);
+		}
+		
+		if (mainStick.getRawButton(2)){
+			
+		}
+	}
+
+}

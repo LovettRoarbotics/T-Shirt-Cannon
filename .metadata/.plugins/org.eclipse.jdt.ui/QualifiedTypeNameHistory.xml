@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.OI"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Solenoid"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.AnalogInput"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.Trigger"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.Trigger.ButtonScheduler"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.subsystems.Altitude"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.commands.DriveWithJoystick"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.RobotDrive"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.GenericHID"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.Constants"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.Robot"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.buttons.Button"/>
 <fullyQualifiedTypeName name="edu.wpi.first.wpilibj.Timer"/>
+<fullyQualifiedTypeName name="org.usfirst.frc.team5482.robot.HardwareAdapter"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.DoubleSolenoid.Value"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.smartdashboard.SmartDashboard"/>
+<fullyQualifiedTypeName name="edu.wpi.first.wpilibj.PowerDistributionPanel"/>
 </qualifiedTypeNameHistroy>

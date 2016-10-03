@@ -1,6 +1,6 @@
 package org.usfirst.frc.team5482.robot.commands;
 
-import org.usfirst.frc.team5482.robot.subsystems.Altitude;
+import org.usfirst.frc.team5482.robot.subsystems.AltitudePID;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -10,11 +10,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class LowerAltitude extends Command {
 
-	Altitude altitude = new Altitude();
-
 	public LowerAltitude() {
-		// Use requires() here to declare subsystem dependencies
-		requires(altitude);
 	}
 
 	// Called just before this Command runs the first time
@@ -23,7 +19,7 @@ public class LowerAltitude extends Command {
 
 	// Called repeatedly when this Command is scheduled to run
 	protected void execute() {
-		Altitude.up();
+		AltitudePID.setpoint-=5;
 		SmartDashboard.putString("Altitude", "Lowering...");
 	}
 

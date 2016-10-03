@@ -1,60 +1,54 @@
 
 package org.usfirst.frc.team5482.robot;
 
+import org.usfirst.frc.team5482.robot.utilities.SystemManager;
+import org.usfirst.frc.team5482.robot.utilities.SystemManager.RobotStatus;
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-/**
- * The VM is configured to automatically run this class, and to call the
- * functions corresponding to each mode, as described in the IterativeRobot
- * documentation. If you change the name of this class or the package after
- * creating this project, you must also update the manifest file in the resource
- * directory.
- */
 public class Robot extends IterativeRobot {
 
-	public static OI oi;
-    /**
-     * This function is run when the robot is first started up and should be
-     * used for any initialization code.
-     */
-    public void robotInit() {
-		oi = new OI();
-    }
-	
-	/**
-     * This function is called once each time the robot enters Disabled mode.
-     * You can use it to reset any subsystem information you want to clear when
-	 * the robot is disabled.
-     */
-    public void disabledInit(){
+	public SystemManager mainSystemsManager = new SystemManager("Main");
 
-    }
-    
+	public static OI oi;
+
+	public void robotInit() {
+		oi = new OI();
+		mainSystemsManager.setStatus(RobotStatus.OK);
+	}
+	public void disabledInit() {
+
+	}
+
 	public void disabledPeriodic() {
 		Scheduler.getInstance().run();
 	}
-    public void autonomousInit() {
-    }
-    public void autonomousPeriodic() {
-    }
 
-    public void teleopInit() {
-        
-    }
+	public void autonomousInit() {
+	}
 
-    /**
-     * This function is called periodically during operator control
-     */
-    public void teleopPeriodic() {
-        Scheduler.getInstance().run();
-    }
-    
-    /**
-     * This function is called periodically during test mode
-     */
-    public void testPeriodic() {
-        LiveWindow.run();
-    }
+	public void autonomousPeriodic() {
+	}
+
+	public void teleopInit() {
+	}
+	public void teleopPeriodic() {
+		Scheduler.getInstance().run();
+		log(mainSystemsManager.toString());
+	}
+
+	public void testPeriodic() {
+		LiveWindow.run();
+	}
+
+	private void log(String message) {
+		log("Robot Status", message);
+	}
+
+	private void log(String key, String message) {
+		SmartDashboard.putString(key, message);
+	}
 }

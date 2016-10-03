@@ -1,0 +1,88 @@
+package org.usfirst.frc.team5482.robot.subsystems;
+
+import org.usfirst.frc.team5482.robot.HardwareAdapter;
+
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
+import edu.wpi.first.wpilibj.SensorBase;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+
+/**
+ *
+ */
+public class PowerDistribution extends Subsystem {
+    
+    // Put methods for controlling this subsystem
+    // here. Call these from Commands.
+	
+	PowerDistributionPanel kPDP = HardwareAdapter.kPDP;
+	
+	double temperature;
+	double current;
+	double totalCurrent;
+	double power;
+	double voltage;
+	double energy;
+
+    public void initDefaultCommand() {
+        // Set the default command for a subsystem here.
+        //setDefaultCommand(new MySpecialCommand());
+    }
+    
+    public void reset(){
+    	kPDP.clearStickyFaults();
+    }
+    
+    public enum Measurement { 
+    	temperature,
+    	current,
+    	power,
+    	voltage,
+    	energy
+    }
+    
+    public void poll(){
+    	poll(Measurement.temperature);
+    	poll(Measurement.current);
+    	poll(Measurement.power);
+    	poll(Measurement.voltage);
+    	poll(Measurement.energy);
+    }
+    
+    public void poll(Measurement type){
+    	switch (type) {
+    	case temperature:
+    		temperature = kPDP.getTemperature();
+    		break;
+    	case current:
+    		for (int i = 0; i < SensorBase.kPDPChannels; i++){
+        		current = kPDP.getCurrent(i);
+    		}
+    		totalCurrent = kPDP.getTotalCurrent();
+		case energy:
+			energy = kPDP.getTotalEnergy();
+			break;
+		case power:
+			power = kPDP.getTotalPower();
+			break;
+		case voltage:
+			voltage = kPDP.getVoltage();
+			break;
+		default:
+			break;
+    	}
+    }
+    
+    public void logUsage(){
+    	log("Temperature", temperature);
+    	log("Total Current", totalCurrent);
+    	log("Total Energy", energy);
+    	log("Power", power);
+    	log("Voltage", voltage);
+    }
+    
+    private void log(String key, double message){
+    	SmartDashboard.putNumber(key, message);
+    }
+}
+

@@ -9,35 +9,41 @@ package org.usfirst.frc.team5482.robot;
 // Yes i know all of this stuff should be in robotmap but i'm to lazy to change all of it. If anybody else wants to then feel free.
 
 public class Constants {
-	
+
 	// CONSTANTS
 	public static double fireDelay = 0.1;
 	
 	// JOYSTICKS
-	public static int kThrottleAxis = 2;
-	public static int kSteeringAxis = 3;
+	public static final int kThrottleAxis = 2;
+	public static final int kSteeringAxis = 3;
 	
-	public static int kTrigger = 1;
-	public static int kSafety = 2;
-	public static int kPressureUp = 3;
-	public static int kPressureDown = 4;
-	public static int kAltitudeUp = 5;
-	public static int kAltitudeDown = 6;
+	public static final int kTrigger = 1;
+	public static final int kSafety = 2;
+	public static final int kPressureUp = 3;
+	public static final int kPressureDown = 4;
+	public static final int kAltitudeUp = 5;
+	public static final int kAltitudeDown = 6;
 	
 	// MOTORS
-	public static int kLeftDriveMotorPWM = 0;
-    public static int kLeftDriveMotor1PDP = 0;
-    public static int kLeftDriveMotor2PDP = 1;
+	public static final int kLeftDriveMotorPWM = 0;
+    public static final int kLeftDriveMotor1PDP = 13;
+    public static final int kLeftDriveMotor2PDP = 12;
 
-    public static int kRightDriveMotorPWM = 1;
-    public static int kRightDriveMotor1PDP = 2;
-    public static int kRightDriveMotor2PDP = 3;
+    public static final int kRightDriveMotorPWM = 1;
+    public static final int kRightDriveMotor1PDP = 2;
+    public static final int kRightDriveMotor2PDP = 3;
     
-    public static int kAltitudeMotorPWM = 2;
-    public static int kAltitudeMotor1PDP = 4;
+    public static final int kAltitudeMotorPWM = 2;
+    public static final int kAltitudeMotor1PDP = 4;
     
-    public static int kRegulatorValvePort = 1;
-    public static int kFiringValvePort = 3;
+    public static final int kRegulatorValvePort = 1;
+    public static final int kFiringValvePort = 3;
     
-    public static int kPressureSensor = 1;
+    // SENSORS
+    
+	public static final double kAltitudeEncoderPPR = 7*26.9;
+    
+    public static final int kPressureSensor = 1;
+
+	public static final double pressureOverage = 15;
 }

@@ -1,0 +1,23 @@
+package org.usfirst.frc.team5482.robot;
+
+public class SystemManager {
+	public enum RobotStatus {
+		OK, WARNING, ERROR, FATAL
+	}
+
+	private RobotStatus masterStatus;
+	
+	private String systemName;
+
+	public SystemManager(String systemName) {
+		this.systemName = systemName;
+	}
+
+	public RobotStatus getMasterStatus() {
+		return masterStatus;
+	}
+
+	public void setMasterStatus(RobotStatus masterStatus) {
+		this.masterStatus = masterStatus;
+	}
+}
