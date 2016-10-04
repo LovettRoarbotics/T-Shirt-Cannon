@@ -11,24 +11,23 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends IterativeRobot {
-
+	
 	private RobotDrive roboDrive = new RobotDrive(0, 1);
-
+	
 	private Victor altitude = new Victor(2);
-
+	
 	private Joystick mainStick = new Joystick(0);
-
+	
 	private Button fire = new JoystickButton(mainStick, 0);
 	private Button safety = new JoystickButton(mainStick, 1);
-	private Button aimUp = new JoystickButton(mainStick, 3);
-	private Button aimDown = new JoystickButton(mainStick, 2);
-
+	
 	private Victor cannonRelay = new Victor(2);
 	private Victor compressors = new Victor(3);
-
+	
 	public int cannonLoop = 0;
-
+	
 	public int compressorDelay = 500;
+	
 
 	public void robotInit() {
 
@@ -42,7 +41,6 @@ public class Robot extends IterativeRobot {
 
 	public void teleopPeriodic() {
 		drive();
-		aim();
 		shoot();
 
 	}
@@ -50,30 +48,27 @@ public class Robot extends IterativeRobot {
 	public void testPeriodic() {
 
 	}
-
-	private void drive() {
+	
+	private void drive(){
 		roboDrive.arcadeDrive(mainStick);
 		SmartDashboard.putString("Drive Status", "GOOD");
 	}
-
-	private void shoot() {
-
-		if (fire.get() && safety.get()) {
+	
+	private void shoot(){
+		
+		if (fire.get() && safety.get()){
 			cannonRelay.set(1);
 			Timer.delay(0.5);
 			cannonRelay.set(0);
-			for (int i = 0; i < compressorDelay; i++) {
+			for (int i = 0; i < 500; i++){
 				compressors.set(1);
 			}
 			compressors.set(0);
 		}
-
-	}
-
-	private void aim() {
-		if (aimDown.get()) {
+		
+		if (mainStick.getRawButton(2)){
 			altitude.set(-0.5);
-		} else if (aimUp.get()) {
+		} else if (mainStick.getRawButton(3)){
 			altitude.set(0.5);
 		} else {
 			altitude.set(0);

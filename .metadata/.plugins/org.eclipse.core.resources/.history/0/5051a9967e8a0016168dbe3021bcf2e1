@@ -71,9 +71,9 @@ public class Robot extends IterativeRobot {
 	}
 
 	private void aim() {
-		if (aimDown.get()) {
+		if (mainStick.getRawButton(2)) {
 			altitude.set(-0.5);
-		} else if (aimUp.get()) {
+		} else if (mainStick.getRawButton(3)) {
 			altitude.set(0.5);
 		} else {
 			altitude.set(0);

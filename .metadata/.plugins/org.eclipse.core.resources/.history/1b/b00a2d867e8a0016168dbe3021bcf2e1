@@ -20,8 +20,6 @@ public class Robot extends IterativeRobot {
 
 	private Button fire = new JoystickButton(mainStick, 0);
 	private Button safety = new JoystickButton(mainStick, 1);
-	private Button aimUp = new JoystickButton(mainStick, 3);
-	private Button aimDown = new JoystickButton(mainStick, 2);
 
 	private Victor cannonRelay = new Victor(2);
 	private Victor compressors = new Victor(3);
@@ -71,9 +69,9 @@ public class Robot extends IterativeRobot {
 	}
 
 	private void aim() {
-		if (aimDown.get()) {
+		if (mainStick.getRawButton(2)) {
 			altitude.set(-0.5);
-		} else if (aimUp.get()) {
+		} else if (mainStick.getRawButton(3)) {
 			altitude.set(0.5);
 		} else {
 			altitude.set(0);
